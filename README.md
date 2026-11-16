@@ -131,16 +131,6 @@ The package contains no dataset or gene-set license grant. The author should
 choose a code license before public distribution and cite the manuscript and
 the feature/data/pathway resources used. No code license is assumed here.
 
-## 中文快速说明
-
-此仓库仅保留主模型、必要的数据适配、训练与测试，不含绘图、消融、基线或服务器脚本。
-先按上面的字段准备患者 CSV、表达 NPZ、通路 JSON，再运行 `prepare_data.py`。
-默认使用全部 patch；输入是已提取的特征，不是原始 WSI。
-报告输入为已处理的英文文本，规则抽取在本地完成，不调用外部模型。
-训练运行 `main.py`；对保存模型单独测试运行 `main.py --test_only`。
-`--cohort` 必须与 CSV 的 cohort 字段一致，特征维度改变时在适配和训练（`--input_dim`）两处同步修改。
-所有折必须有足够患者与事件以支持训练和验证；程序不重新划分患者。
-公开上传时仅上传本仓库代码，真实数据和训练输出应留在私有目录。
 
 ## Regression fixes
 
